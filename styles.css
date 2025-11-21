@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Inter', sans-serif;
+  font-size: 16px;
+
+}
+
+span {
+  font-size: 32px;
 }
 
 body {
@@ -306,11 +315,13 @@ body {
   display: grid;
   gap: 30px;
 }
-
-
-
-
 /* === QT WORD SECTION === */
+
+
+.color {
+  color: #4f46e5;
+}
+
 .qt-word {
   width: 100%;
   max-width: 1200px;
@@ -319,133 +330,79 @@ body {
   box-sizing: border-box;
 }
 
-/* FLEX ROW */
-.row {
-  display: flex;
+.qt-word .row {
+  display: flex !important;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* COLUMNS */
-.col {
-  width: 50%;
+  gap: 20px;
   box-sizing: border-box;
-  padding: 20px;
+  flex-direction: row !important;
 }
 
-/* TEXT SIDE */
-.text h2 {
-  font-size: 32px;
-  color: #111827;
-  margin-bottom: 15px;
+.qt-word .col.text {
+  flex: 0 0 60%;
+  max-width: 60%;
+  padding: 0 10px;
+  box-sizing: border-box;
 }
 
-.text span {
-  color: #4f46e5;
-}
-
-.text p {
-  color: #555;
-  margin-bottom: 25px;
-  line-height: 1.6;
-}
-
-/* BUTTON */
-.btn {
-  display: inline-block;
-  padding: 10px 25px;
-  background: linear-gradient(135deg, #6366f1, #4f46e5);
-  color: white;
-  border-radius: 30px;
-  font-weight: 500;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  background: linear-gradient(135deg, #4f46e5, #6366f1);
-}
-
-/* IMAGE SIDE */
-.image {
+.qt-word .col.image {
+  flex: 0 0 40%;
+  max-width: 40%;
+  padding: 0 10px;
+  box-sizing: border-box;
   text-align: center;
 }
 
-.image img {
+.qt-word .col.image img {
   width: 100%;
   max-width: 480px;
   height: auto;
-  border-radius: 8px;
-  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
 }
 
-
-/* === VAL SECTION (60% image / 40% text) === */
+/* === VAL SECTION === */
 .val {
-  display: flex;
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 40px 20px 40px 100px;
+  padding: 40px 20px;
   box-sizing: border-box;
   background-color: #ffffff;
 }
 
-/* MAIN FLEX CONTAINER */
+
 .val-container {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding: 40px 5%;
-  background-color: #ffffff;
   width: 100%;
-  min-height: 320px;
+  min-height: auto;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* === LEFT SIDE: TEXT (40%) === */
-.val-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 10px;
+/* TEXT SIDE */
+
+.color {
+  color: #4f46e5;
 }
 
 .val-text {
-  flex: 0 0 40%;
-  max-width: 40%;
+  flex: 0 0 60%;
+  max-width: 60%;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .val-subtitle {
-  color: #6c63ff;
+  color: #4f46e5;
   font-weight: 600;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 10px;
 }
-
-.val-text h2 {
-  font-size: 48px;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 30px;
-  line-height: 1.2;
-}
-
-.val-text h2 span {
-  color: #6366f1;
-}
-
-.val-description {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-/* === VALUE POINTS === */
 .val-points {
   display: flex;
   flex-direction: row;
@@ -482,7 +439,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* === BUTTON === */
 .val-btn {
   padding: 12px 24px;
   background: #6366f1;
@@ -499,73 +455,63 @@ body {
   background: #6366f1;
 }
 
-/* === RIGHT SIDE: IMAGE (60%) === */
+/* IMAGE SIDE 40% */
 .val-image {
-  flex: 0 0 60%;
-  max-width: 60%;
+  flex: 0 0 40%;
+  max-width: 40%;
   text-align: center;
-  padding: 50px;
-
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-/* display: flex;
-  justify-content: center;
-  align-items: center; */
-
-/* text-align: right;
-  padding-right: 40px;
-  box-sizing: border-box;
-  display: flex;
-}*/
 
 .val-image img {
-  width: 150%;
+  width: 100%;
   max-width: 550px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
+/* STEPS SECTION ↓ */
 
-
-
-
-
-
-.steps {
+/* .steps {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
   flex-wrap: wrap;
-}
+}*/
 
-@media (max-width: 768px) {
-  .steps {
-    flex-direction: column;
-  }
-
-  .steps__image-box,
-  .steps__text-box {
-    width: 100%;
-    text-align: center;
-  }
-
-  .steps__image {
-    margin-top: 40px;
-  }
+.steps {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .steps__image-box {
   width: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+
 }
 
 .steps__image {
-  width: 450%;
-  max-width: 500px;
-  height: 300px;
-  margin-top: 200px;
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
 }
+
 
 .steps__text-box {
   width: 50%;
@@ -629,6 +575,8 @@ body {
   color: #6b7280;
   font-size: 0.95rem;
 }
+
+/* PRICING SECTION ↓ */
 
 
 .pricing {
@@ -821,10 +769,9 @@ body {
   transform: translateY(-5px);
 }
 
-/* Stars */
+
 .text-card .stars {
   color: #f6c343;
-  /* gold stars */
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
@@ -1007,4 +954,70 @@ body {
 
 .footer__socials img:hover {
   opacity: 0.8;
+}
+
+
+/* MEDIA SECTION */
+@media (max-width: 768px) {
+  .qt-word .row {
+    flex-direction: column !important;
+    align-items: center;
+    text-align: center;
+  }
+
+  .qt-word .col.text,
+  .qt-word .col.image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 12px 10px;
+  }
+
+  .qt-word .col.image img {
+    width: 90%;
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 768px) {
+  .val-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .val-text,
+  .val-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 10px 0;
+  }
+
+  .val-image img {
+    width: 90%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .val-points {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps {
+    flex-direction: column;
+  }
+
+  .steps__image-box,
+  .steps__text-box {
+    flex: 0 0 50%;
+    width: 50%;
+    box-sizing: border-box;
+  }
+
+  .steps__image {
+    margin-top: 40px;
+  }
 }
