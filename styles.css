@@ -18,6 +18,7 @@ body {
   color: #333;
   background-color: #fff;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* Nav Bar */
@@ -360,9 +361,8 @@ body {
 
 /* === QT WORD SECTION === */
 
-.color {
-  color: #4f46e5;
-}
+
+
 
 .qt-word {
   padding: 96px 16px;
@@ -381,7 +381,6 @@ body {
 }
 
 .qt-subtitle {
-  font-size: 0.75rem;
   letter-spacing: 0.16em;
   font-weight: 700;
   color: #4f46e5;
@@ -430,6 +429,19 @@ body {
 }
 
 /* === VAL SECTION === */
+.color {
+  color: #4f46e5;
+}
+.color-val {
+  color: #4f46e5;
+  font-size: 20px;}
+
+  .color-qt {
+    color: #4f46e5;
+    font-size: 20px;
+  }
+
+
 .val {
   width: 100%;
   max-width: 1400px;
@@ -465,6 +477,7 @@ body {
 .val-subtitle {
   color: #4f46e5;
   font-weight: 600;
+  
 }
 
 .val-points {
@@ -477,12 +490,13 @@ body {
 .val-point-icon {
   width: 40px;
   height: 40px;
+  font-size: 1.4rem;
   background-color: #e9e7ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin: 0 auto 12px;
 }
 
 .val-point-icon i {
@@ -494,6 +508,8 @@ body {
   color: #111827;
   font-weight: 600;
   margin-bottom: 5px;
+  text-align: center;
+
 }
 
 .val-point p {
@@ -501,18 +517,21 @@ body {
   font-size: 16px;
   line-height: 1.6;
   margin-bottom: 20px;
+  text-align: center;
+  font-size: 18px;
 }
+
 
 .val-btn {
   padding: 12px 24px;
   background: #6366f1;
   color: #fff;
-  border-radius: 8px;
+  border-radius: 24px;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
   transition: 0.3s ease;
-  margin-top: 20px;
+  margin-top: -20px;
 }
 
 .val-btn:hover {
@@ -533,6 +552,23 @@ body {
   height: auto;
   display: block;
   margin: 0 auto;
+}
+.val-point.affordable .val-point-icon {
+  background-color: #78dba2;
+}
+.val-point.professionalism .val-point-icon {
+  background-color: #ec6657;
+  
+}
+.val-h2 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.val-description {
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 10px;
+
 }
 
 /* === STEPS SECTION === */
@@ -905,7 +941,7 @@ body {
   margin: 0 auto;
   padding: 48px 64px;
   background-color: #3b82f6;
-  border-radius: 12px;
+  border-radius: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -944,7 +980,7 @@ body {
 
 .footer__btn {
   padding: 12px 32px;
-  border-radius: 999px;
+  border-radius: 99px;
   border: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -1058,107 +1094,93 @@ body {
 }
 
 
-/* MEDIA SECTION */
-@media (max-width: 900px) {
-  .hero__row {
+/* MEDIA QUERIES */
+@media (max-width: 992px) {
+
+  .nav {
+    padding: 10px 16px;
+  }
+
+  .nav ul {
+    margin-left: 0;              
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .hero__row,
+  .qt-row,
+  .steps__row,
+  .val-container,
+  .text-container {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 32px;
-  }
-
-  .hero-img {
-    align-self: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .qt-word .row {
-    flex-direction: column !important;
     align-items: center;
     text-align: center;
   }
 
-  .qt-word .col.text,
-  .qt-word .col.image {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 12px 10px;
-  }
-
-  .qt-word .col.image img {
-    width: 90%;
-    max-width: 420px;
-  }
-
-  .qt-row {
-    flex-direction: column-reverse;
-    gap: 32px;
-  }
-
+  .hero-text,
+  .hero-img,
   .qt-text,
-  .qt-image {
-    max-width: 100%;
-  }
-
-  .qt-text h2 {
-    font-size: 1.9rem;
-  }
-
-}
-
-@media (max-width: 768px) {
-  .val-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .val-text,
-  .val-image {
-    flex: 0 0 100%;
-    max-width: 100%;
-    padding: 10px 0;
-  }
-
-  .val-image img {
-    width: 90%;
-    max-width: 360px;
-    margin: 0 auto;
-  }
-
-  .val-points {
-    flex-direction: column;
-    gap: 1.5rem;
-    align-items: center;
-  }
-}
-
-@media (max-width: 900px) {
-  .steps__row {
-    flex-direction: column;
-    gap: 32px;
-  }
-
+  .qt-image,
+  .steps__text-box,
   .steps__image-box,
-  .steps__text-box {
+  .val-text,
+  .val-image,
+  .text-box,
+  .text-image {
+    max-width: 100%;
+    flex: 0 0 100%;
+    padding: 0;
+    min-width: 0;               
+  }
+
+  .hero-img img,
+  .qt-image img,
+  .steps__image,
+  .text-image img,
+  .val-image img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  /* SERVICES */
+  .service-items {
+    grid-template-columns: 1fr;
+  }
+
+  .service {
     max-width: 100%;
   }
 
-  .steps__title {
-    font-size: 1.9rem;
-  }
-}
-
-@media (max-width: 900px) {
+  /* PRICING */
   .plan {
     width: 100%;
     max-width: 420px;
     margin: 0 auto 24px;
   }
 
-  .plans {
-    justify-content: center;
+  /* FOOTER */
+  .footer__banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 24px;
   }
-} 
+
+  .footer__banner-buttons {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-left: 0;
+  }
+
+  .footer__links-row,
+  .footer__bottom-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 0 16px;
+  }
+}
+
 
 
